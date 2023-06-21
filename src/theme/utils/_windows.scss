@@ -1,0 +1,133 @@
+@import "variables";
+@import "responsive";
+
+.windows-clock {
+  border: 2px inset;
+  background: white;
+  max-width: 60px;
+  font-size: 12px;
+  padding: 7px 12px;
+  max-height: 27px;
+  position: absolute;
+  right: 15px;
+  text-align: center;
+  @include screen-mobile {
+    left: 15px;
+  }
+}
+
+.window-open {
+  border: 2px inset;
+  background-color: transparent;
+  padding: 12px;
+  max-height: 27px;
+  margin-left: 5px;
+  margin-top: 1px;
+  max-width: 40px;
+  flex-basis: 0px;
+  flex-grow: 1;
+  border-radius: 5px;
+}
+
+.window-open:nth-child(1) {
+  margin-left: 10px;
+}
+
+.window-open:hover {
+  cursor: pointer;
+  background: var(--hover);
+}
+
+.windows-menu {
+  background: var(--primary);
+  left: -13px;
+  // border-radius: 0 !important;
+  border: outset 1px white;
+}
+
+.window {
+  width: 300px;
+  height: 350px;
+  // background: var(--primary);
+  border: outset 2px black;
+  // border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+  overflow-y: hidden;
+  .content {
+    .buttons {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #ddd;
+      color: white;
+      padding: 3px 25px;
+      font-size: 12px;
+      border: outset 2px;
+      position: relative;
+    }
+    .button:hover {
+      background: var(--hover);
+      color: black;
+    }
+
+    .button:active {
+      border: inset 2px;
+    }
+  }
+}
+
+.window .titlebar {
+  background: var(--primary);
+  border: 1px solid white;
+  padding-left: 5px;
+  color: white;
+  height: 22px;
+  cursor: grab;
+  @include screen-mobile {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    div {
+      margin-left: 2px;
+    }
+    button {
+      transform: scale(1.4);
+      right: 10px;
+      top: 10px;
+    }
+  }
+}
+
+.window-titlebar-button,
+.window-titlebar-button-info {
+  border-left: 2px solid #ededed;
+  border-top: 2px solid #ededed;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  appearance: none;
+  font-weight: 700;
+  padding: 0;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:active {
+    border: 2px inset;
+    background-color: var(--hover);
+  }
+}
+
+.window-titlebar-button-info {
+  right: 19px;
+}

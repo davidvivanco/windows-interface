@@ -1,0 +1,13 @@
+@import "../../../../../theme/utils/responsive";
+
+.window {
+  width: 500px;
+  height: 480px;
+  @include screen-mobile {
+    width: 100vw;
+    height: 100vh;
+  }
+  .content {
+    padding: 30px;
+  }
+}

@@ -1,0 +1,22 @@
+
+.checkbox {
+    font-size: 14px;
+    padding: 5px;
+}
+
+.checkbox:before {
+    display: inline-block;
+    background: #fff;
+    height: 12px;
+    width: 12px;
+    content: '';
+    margin-right: 5px;
+    border: inset 2px;
+    vertical-align: bottom;
+}
+
+.checked:before {
+    content: '✔';
+    line-height: 14px;
+    font-weight: 800;
+}

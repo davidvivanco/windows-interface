@@ -1,0 +1,41 @@
+@import "../../../theme/utils/variables";
+@import "../../../theme/utils/responsive";
+
+.desktop-container {
+  width: 100vw;
+  height: 100vh;
+  // background-color: #008080;
+  // background: url("../../../assets/images/wallpapers/fight_club.png");
+  // background: url("../../../assets/images/wallpapers/fresh_prince.gif");
+  background-size: cover;
+  position: relative;
+}
+
+.icons {
+  position: absolute;
+  left: 1%;
+  top: 3%;
+  @include screen-mobile {
+    top: 5%;
+  }
+
+  .col {
+    margin-left: 10px;
+    @include screen-mobile {
+      margin-left: 0px;
+    }
+  }
+
+  .icon {
+    padding: 5px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+  }
+  .icon:hover {
+    background-color: var(--primary);
+    opacity: 0.65;
+    color: white;
+  }
+}

@@ -1,0 +1,27 @@
+<div
+  class="window"
+  cdkDrag
+  cdkDragRootElement=".cdk-overlay-pane"
+  cdkDragHandle
+  scro
+>
+  <div class="titlebar flex">
+    <div>Gotcha</div>
+    <div>
+      <button class="window-titlebar-button" (click)="close()">
+        <img src="./assets/icons/close-icon.png" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="photo flex jc-c ai-c">
+      <img width="400" src="./assets/gifs/circle.gif" alt="" />
+    </div>
+    <div class="t-center mt-xl gotcha">Gotcha!</div>
+    <div class="buttons ">
+        <div class="button cp flex jc-c ai-c" (click)="close()">
+          <div class="flex jc-c ai-c ml-4">Ou Yeah!</div>
+        </div>
+      </div>
+  </div>
+</div>

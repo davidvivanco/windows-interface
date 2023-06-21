@@ -1,0 +1,49 @@
+@import "../../../../../theme/utils/variables";
+@import "../../../../../theme/utils/responsive";
+
+.window {
+  .content {
+    position: absolute;
+    top: 22px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    .label {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    img {
+      margin-top: 30px;
+    }
+
+    .button {
+      background: var(--primary);
+      &:hover {
+        background-color: var(--hover);
+        color: white;
+      }
+    }
+  }
+}
+
+.textbox {
+  border: inset 2px;
+  background: #fff;
+  margin: 5px;
+  height: 50px;
+  padding: 2px;
+  font-size: 14px;
+  overflow: auto;
+}
+
+.textbox:focus {
+  border: inset 2px;
+  outline: none;
+}
+
+.checkbox-list {
+  padding-left: 10px;
+  margin-top: 5px;
+}

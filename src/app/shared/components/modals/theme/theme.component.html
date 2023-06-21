@@ -1,0 +1,27 @@
+<div class="window" cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle>
+    <div class="titlebar flex">
+        Switch theme
+        <div>
+            <button class="window-titlebar-button" (click)="close()">
+                <img src="../../../../../assets/icons/close-icon.png" alt="">
+            </button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="flex jc-c img">
+            <img width="100" src="../../../../assets/icons/computer.png" alt="">
+        </div>
+        <div class="ml-6 label t-center">Choose theme desktop</div>
+
+        <!-- <div class="textbox" contenteditable="true">Trying to recreate the windows 95 style</div> -->
+        <div class="checkbox-list">
+            <app-checkbox (click)="onCheckChange(i)" *ngFor="let ele of checkboxes;let i = index" [checked]=ele.checked
+                [text]=ele.text></app-checkbox>
+
+        </div>
+        <div class="buttons">
+            <div class="button cp" (click)="close()">Let's Rock
+            </div>
+        </div>
+    </div>
+</div>

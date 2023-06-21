@@ -1,0 +1,74 @@
+<mat-toolbar class="windows-taskbar">
+  <button
+    [matMenuTriggerFor]="menu"
+    class="windows-taskbar__start-btn hide-mobile"
+  >
+    Inicio
+  </button>
+  <div [matMenuTriggerFor]="menu" class="hamburguer hide-desktop">
+    <img src="./assets/icons/menu.png" alt="" />
+  </div>
+  <div class="flex hide-mobile" style="flex-wrap: wrap">
+    <div
+      *ngFor="let w of ui?.windowsOpen"
+      readonly
+      disabled
+      class="window-open flex ai-c jc-c"
+    >
+      <img width="20" [src]="'./assets/icons/' + w" alt="" />
+    </div>
+  </div>
+  <mat-menu class="windows-menu" #menu="matMenu">
+    <mat-selection-list [multiple]="false">
+      <button mat-menu-item [matMenuTriggerFor]="settings">
+        <div class="flex">
+          <img width="25" src="../assets/icons/settings.png" alt="" />
+          <small class="ml-6 white" style="font-size: 13px"> Settings</small>
+        </div>
+      </button>
+      <mat-list-item>
+        <div class="flex">
+          <img width="25" src="../assets/icons/email.png" alt="" />
+          <small class="ml-6 white" style="font-size: 13px"> Contact</small>
+        </div>
+      </mat-list-item>
+      <mat-list-item (click)="ui.openAboutModal()">
+        <div class="flex">
+          <img width="25" src="../assets/icons/user.png" alt="" />
+          <small class="ml-6 white" style="font-size: 13px"> About me</small>
+        </div>
+      </mat-list-item>
+    </mat-selection-list>
+  </mat-menu>
+
+  <mat-menu class="windows-menu" #settings="matMenu">
+    <mat-list-item
+      style="cursor: pointer; padding-bottom: 6px; padding-top: 6px"
+      (click)="ui.openSwitchThemeModal()"
+    >
+      <div class="flex cp">
+        <img width="25" src="../assets/icons/computer.png" alt="" />
+        <small class="ml-4" style="font-size: 13px"> Switch Theme</small>
+      </div>
+    </mat-list-item>
+    <mat-list-item
+      style="cursor: pointer; padding-bottom: 6px; padding-top: 6px"
+      (click)="ui.openSwitchThemeModal()"
+      class="mt-10"
+    >
+      <div class="flex cp ai-c">
+        <img width="20" height="20" src="../assets/icons/uk.png" alt="" />
+        <small class="ml-8" style="font-size: 13px"> English</small>
+      </div>
+    </mat-list-item>
+  </mat-menu>
+
+  <div class="ref flex jc-c ai-c">
+    <img width="20" class="cp hide-mobile" src="./assets/icons/github.png" alt="">
+    <img width="20" class="ml-4 cp hide-mobile"  src="./assets/icons/linkedin.png" alt="">
+    <div>
+      <strong class="ml-6" (click)="ui.openAboutModal()">David Vivanco</strong>
+    </div>
+  </div>
+  <input readonly disabled class="windows-clock cp" type="text" value="10:00" />
+</mat-toolbar>

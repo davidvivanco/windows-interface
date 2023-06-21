@@ -1,0 +1,21 @@
+<div
+  class="window"
+  cdkDrag
+  cdkDragRootElement=".cdk-overlay-pane"
+  cdkDragHandle
+  scro
+>
+  <div class="titlebar flex">
+    <div>{{ fileName }}</div>
+    <div>
+      <button class="window-titlebar-button" (click)="close()">
+        <img src="./assets/icons/close-icon.png" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="photo flex jc-c ai-c">
+      <img width="320" [src]="fileBasePath + fileName" alt="" />
+    </div>
+  </div>
+</div>

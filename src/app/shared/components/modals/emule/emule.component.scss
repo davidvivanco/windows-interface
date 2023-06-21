@@ -1,0 +1,27 @@
+@import "../../../../../theme/utils/responsive";
+
+.window {
+  width: 500px;
+  height: 380px;
+  @include screen-mobile {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+.content {
+  padding: 20px;
+  .button {
+    display: flex;
+    background: var(--primary);
+    @include screen-mobile {
+      font-size: 15px;
+    }
+  }
+  .gotcha {
+    font-size: 25px;
+  }
+  .button:hover {
+    background: var(--hover);
+    color: black;
+  }
+}

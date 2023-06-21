@@ -1,0 +1,93 @@
+<div
+  class="window"
+  cdkDrag
+  cdkDragRootElement=".cdk-overlay-pane"
+  cdkDragHandle
+>
+  <div class="titlebar flex">
+    <div>mis_fotos</div>
+    <div>
+      <button class="window-titlebar-button" (click)="close()">
+        <img src="./assets/icons/close-icon.png" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="photo-grid flex fd-col">
+      <div>
+        <div class="flex jc-se">
+          <div
+            class="flex fd-col jc-c ai-c cp"
+            (click)="ui.openPhotoDetailModal('img_1.jpeg')"
+          >
+            <img
+              width="100"
+              src="./assets/images/mis_fotos/img_1.jpeg"
+              alt=""
+            />
+            <div class="mt-xs">img_1.jpeg</div>
+          </div>
+          <div
+            class="flex fd-col jc-c ai-c cp"
+            (click)="ui.openPhotoDetailModal('img_2.jpeg')"
+          >
+            <img
+              height="100"
+              src="./assets/images/mis_fotos/img_2.jpeg"
+              alt=""
+            />
+            <div class="mt-xs">img_2.jpeg</div>
+          </div>
+          <div
+          class="flex fd-col jc-c ai-c cp"
+          (click)="ui.openPhotoDetailModal('selfie_jiujitsu.jpg')"
+        >
+          <img
+            height="100"
+            src="./assets/images/mis_fotos/selfie_jiujitsu.jpg"
+            alt=""
+          />
+          <div class="mt-xs">selfie_jiujitsu.jpg</div>
+        </div>
+        </div>
+      </div>
+      <div class="mt-xl">
+        <div class="flex jc-se mt-m">
+          <div
+            class="flex fd-col jc-c ai-c cp"
+            (click)="ui.openPhotoDetailModal('img_3.jpeg')"
+          >
+            <img
+              width="100"
+              src="./assets/images/mis_fotos/img_3.jpeg"
+              alt=""
+            />
+            <div class="mt-xs">img_3.jpeg</div>
+          </div>
+          <div
+            class="flex fd-col jc-c ai-c cp"
+            (click)="ui.openPhotoDetailModal('img_4.jpeg')"
+          >
+            <img
+              width="100"
+              src="./assets/images/mis_fotos/img_4.jpeg"
+              alt=""
+            />
+            <div class="mt-xs">img_4.jpeg</div>
+          </div>
+          <div
+          class="flex fd-col jc-c ai-c cp"
+          (click)="ui.openPhotoDetailModal('selfie.jpeg')"
+        >
+          <img
+            width="100"
+            src="./assets/images/mis_fotos/selfie.jpeg"
+            alt=""
+          />
+          <div class="mt-xs">selfie.jpeg</div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

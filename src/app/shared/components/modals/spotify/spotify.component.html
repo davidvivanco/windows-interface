@@ -1,0 +1,46 @@
+<div
+  class="window"
+  cdkDrag
+  cdkDragRootElement=".cdk-overlay-pane"
+  cdkDragHandle
+>
+  <div class="titlebar flex">
+    Spotify
+    <div>
+      <button class="window-titlebar-button" (click)="close()">
+        <img src="../../../../../assets/icons/close-icon.png" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="content white">
+    <div>
+      <div class="flex jc-c mt-xl">Mis favoritos</div>
+      <div class="mt-xl">
+        <div
+          *ngFor="let ele of audioData"
+          (click)="play(ele.path)"
+          class="flex ai-c cp item"
+        >
+          <div class="flex jc-c ai-c avatar">
+            <img
+              class="rounded"
+              width="40"
+              [src]="avatarBasePath + ele.avatar"
+              alt=""
+            />
+          </div>
+          <div class="ml-10 flex jc-c ai-s fd-col">
+            <div class="song" matListItemTitle>{{ ele.song }}</div>
+            <div class="artist" matListItemLine>{{ ele.artist }}</div>
+          </div>
+          <div class="play-icon">
+            <img width="28" [src]="audioIconPath" alt="icon-audio" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="audio-controls">
+      <audio id="audio" controls [src]="audioPath"></audio>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div
+  (click)="ui.aboutModal.addPanelClass('z-index-high')"
+  class="window"
+  cdkDrag
+  cdkDragRootElement=".cdk-overlay-pane"
+  cdkDragHandle
+>
+  <div class="titlebar flex">
+    <div>About Me</div>
+    <div>
+      <button class="window-titlebar-button-info" (click)="close()">
+        <img src="./assets/icons/question-icon.png" alt="" />
+      </button>
+      <button class="window-titlebar-button" (click)="close()">
+        <img src="./assets/icons/close-icon.png" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="content flex fd-rr padding">
+    <div class="flex jc-c mt-10 w100">
+      <div class="polaroid">
+        <img
+          class="hide-mobile"
+          width="160"
+          src="../../../../../assets/images/me.jpeg"
+          alt=""
+        />
+        <!-- <img
+          class="hide-desktop"
+          width="200"
+          src="../../../../../assets/images/me.jpeg"
+          alt=""
+        /> -->
+      </div>
+    </div>
+    <div class="t-center desc flex fd-col jc-c">
+      <div class="mt-4">
+        Hi! My name is David Vivanco. I'm a Software Developer based in Madrid.
+        I'm interested in freelance opportunities.
+      </div>
+      <div class="mt-6">
+        I'm a specialist in JavaScript. Pro frameworks: Angular, Node, React,
+        Ionic
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="button cp flex jc-c ai-c" (click)="close()">
+        <img width="20" src="../../../../../assets/icons/email.png" alt="" />
+        <div class="flex jc-c ai-c ml-4">Text me!</div>
+      </div>
+    </div>
+  </div>
+</div>
