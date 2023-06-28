@@ -3,7 +3,7 @@
     [matMenuTriggerFor]="menu"
     class="windows-taskbar__start-btn hide-mobile"
   >
-    Inicio
+    {{ 'start' | translate }}
   </button>
   <div [matMenuTriggerFor]="menu" class="hamburguer hide-desktop">
     <img src="./assets/icons/menu.png" alt="" />
@@ -23,19 +23,25 @@
       <button mat-menu-item [matMenuTriggerFor]="settings">
         <div class="flex">
           <img width="25" src="./assets/icons/settings.png" alt="" />
-          <small class="ml-6 white" style="font-size: 13px"> Settings</small>
+          <small class="ml-6 white" style="font-size: 13px">
+            {{ 'settings' | translate }}
+          </small>
         </div>
       </button>
       <mat-list-item>
         <div class="flex">
           <img width="25" src="./assets/icons/email.png" alt="" />
-          <small class="ml-6 white" style="font-size: 13px"> Contact</small>
+          <small class="ml-6 white" style="font-size: 13px">
+            {{ 'contact' | translate }}
+          </small>
         </div>
       </mat-list-item>
       <mat-list-item (click)="ui.openAboutModal()">
         <div class="flex">
           <img width="25" src="./assets/icons/user.png" alt="" />
-          <small class="ml-6 white" style="font-size: 13px"> About me</small>
+          <small class="ml-6 white" style="font-size: 13px">
+            {{ 'about' | translate }}
+          </small>
         </div>
       </mat-list-item>
     </mat-selection-list>
@@ -48,27 +54,54 @@
     >
       <div class="flex cp">
         <img width="25" src="./assets/icons/computer.png" alt="" />
-        <small class="ml-4" style="font-size: 13px"> Switch Theme</small>
+        <small class="ml-4" style="font-size: 13px">
+          {{ 'switch_theme' | translate }}</small
+        >
       </div>
     </mat-list-item>
     <mat-list-item
       style="cursor: pointer; padding-bottom: 6px; padding-top: 6px"
-      (click)="ui.openSwitchThemeModal()"
+      (click)="setTranslate()"
       class="mt-10"
     >
       <div class="flex cp ai-c">
-        <img width="20" height="20" src="./assets/icons/uk.png" alt="" />
-        <small class="ml-8" style="font-size: 13px"> English</small>
+        <img
+          *ngIf="lang === 'es'"
+          width="20"
+          height="20"
+          src="./assets/icons/uk.png"
+          alt=""
+        />
+        <img
+          *ngIf="lang === 'en'"
+          width="20"
+          height="20"
+          src="./assets/icons/spain.png"
+          alt=""
+        />
+        <small class="ml-8" style="font-size: 13px">
+          {{ 'language' | translate }}</small
+        >
       </div>
     </mat-list-item>
   </mat-menu>
 
   <div class="ref flex jc-c ai-c">
-    <img width="20" class="cp hide-mobile" src="./assets/icons/github.png" alt="">
-    <img width="20" class="ml-4 cp hide-mobile"  src="./assets/icons/linkedin.png" alt="">
+    <img
+      width="20"
+      class="cp hide-mobile"
+      src="./assets/icons/github.png"
+      alt=""
+    />
+    <img
+      width="20"
+      class="ml-4 cp hide-mobile"
+      src="./assets/icons/linkedin.png"
+      alt=""
+    />
     <div>
       <strong class="ml-6" (click)="ui.openAboutModal()">David Vivanco</strong>
     </div>
   </div>
-  <input readonly disabled class="windows-clock cp" type="text" value="10:00" />
+  <input readonly disabled class="windows-clock cp" type="text" [value]="hour" />
 </mat-toolbar>

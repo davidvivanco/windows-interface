@@ -35,18 +35,16 @@
     </div>
     <div class="t-center desc flex fd-col jc-c">
       <div class="mt-4">
-        Hi! My name is David Vivanco. I'm a Software Developer based in Madrid.
-        I'm interested in freelance opportunities.
+        {{ 'about_desc1' | translate }}
       </div>
       <div class="mt-6">
-        I'm a specialist in JavaScript. Pro frameworks: Angular, Node, React,
-        Ionic
+        {{ 'about_desc2' | translate }}
       </div>
     </div>
     <div class="buttons">
       <div class="button cp flex jc-c ai-c" (click)="close()">
         <img width="20" src="./assets/icons/email.png" alt="" />
-        <div class="flex jc-c ai-c ml-4">Text me!</div>
+        <div class="flex jc-c ai-c ml-4">{{ 'text_me' | translate }}</div>
       </div>
     </div>
   </div>

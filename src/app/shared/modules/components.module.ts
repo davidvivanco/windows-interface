@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { ThemeModalComponent } from '../components/modals/theme/theme.component';
 import { MaterialModule } from './material';
@@ -7,26 +6,19 @@ import { CommonModule } from '@angular/common';
 import { TaskbarComponent } from '../components/taskbar/taskbar.component';
 import { SpotifyComponent } from '../components/modals/spotify/spotify.component';
 import { AboutComponent } from '../components/modals/about/about.component';
-
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
-    declarations: [
-        ThemeModalComponent,
-        CheckboxComponent,
-        TaskbarComponent,
-        SpotifyComponent,
-        AboutComponent,
-
-    ],
-    imports: [
-        MaterialModule,
-        CommonModule
-    ],
-    exports: [
-        CheckboxComponent,
-        TaskbarComponent
-    ],
-    providers: [],
-    bootstrap: []
+  declarations: [
+    ThemeModalComponent,
+    CheckboxComponent,
+    TaskbarComponent,
+    SpotifyComponent,
+    AboutComponent,
+  ],
+  imports: [TranslateModule, MaterialModule, CommonModule],
+  exports: [CheckboxComponent, TaskbarComponent],
+  providers: [],
+  bootstrap: [],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}
