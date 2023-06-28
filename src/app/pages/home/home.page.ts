@@ -1,8 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
-import {
-  EventsService,
-} from 'src/app/shared/services/events.service';
+import { EventsService } from 'src/app/shared/services/events.service';
 import { ThemeService } from 'src/app/shared/services/theme.service';
 import { UiService } from 'src/app/shared/services/ui.service';
 
@@ -15,7 +13,7 @@ export class HomePage implements OnInit {
   imgWidth: string;
   wallpaperBasePath: string;
   desktopBackground: { [key: string]: string };
-  background: SafeStyle = '#bbefc8';
+  background: SafeStyle;
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.events.innerWidth = window.innerWidth;
@@ -28,17 +26,17 @@ export class HomePage implements OnInit {
     private events: EventsService,
     private themeService: ThemeService
   ) {
-    this.wallpaperBasePath = '../../../assets/images/wallpapers/';
+    this.wallpaperBasePath = './assets/images/wallpapers/';
     this.setDesktopBackground();
     this.setIconWidth();
     this.setThemeObservable();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   private setDesktopBackground() {
     this.desktopBackground = {
+      oldSchool: this.wallpaperBasePath + 'old_school_bg.png',
       firstRule: this.wallpaperBasePath + 'figth_club.jpeg',
       fresh: this.wallpaperBasePath + 'fresh_prince.gif',
       delorean: this.wallpaperBasePath + 'delorean.jpeg',
@@ -51,10 +49,9 @@ export class HomePage implements OnInit {
 
   private setThemeObservable() {
     this.themeService.getTheme().subscribe((theme) => {
-      // this.background = this.sanitization.bypassSecurityTrustStyle(
-      //   'url(' + this.desktopBackground[theme] + ')'
-      // );
-
+      this.background = this.sanitization.bypassSecurityTrustStyle(
+        'url(' + this.desktopBackground[theme] + ')'
+      );
     });
   }
 }

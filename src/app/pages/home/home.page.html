@@ -4,24 +4,25 @@
   *ngIf="background"
   class="desktop-container"
   [style.background]="background"
+  
 >
   <div class="icons flex">
     <div class="col">
       <div class="cp icon">
         <div class="flex jc-c">
-          <img [width]="imgWidth" src="../assets/icons/email.png" alt="" />
+          <img [width]="imgWidth" src="./assets/icons/email.png" alt="" />
         </div>
         <div class="flex jc-c">Contact</div>
       </div>
       <div class="cp icon">
         <div class="flex jc-c">
-          <img [width]="imgWidth" src="../assets/icons/marciano.png" alt="" />
+          <img [width]="imgWidth" src="./assets/icons/marciano.png" alt="" />
         </div>
         <div class="flex jc-c mt-10">Play</div>
       </div>
       <div class="cp icon" (click)="ui.openAboutModal()">
         <div class="flex jc-c">
-          <img [width]="imgWidth" src="../assets/icons/user.png" alt="" />
+          <img [width]="imgWidth" src="./assets/icons/user.png" alt="" />
         </div>
         <div class="flex jc-c mt-6">About me</div>
       </div>
@@ -29,7 +30,7 @@
         <div class="flex jc-c">
           <img
             [width]="imgWidth"
-            src="../assets/icons/spotify-icon.png"
+            src="./assets/icons/spotify-icon.png"
             alt=""
           />
         </div>
@@ -39,13 +40,13 @@
     <div class="col">
       <div class="cp icon" (click)="ui.openMyPicsModal()">
         <div class="flex jc-c">
-          <img [width]="imgWidth" src="../assets/icons/folder.png" alt="" />
+          <img [width]="imgWidth" src="./assets/icons/folder.png" alt="" />
         </div>
         <div class="flex jc-c">mis_fotos</div>
       </div>
       <div class="cp icon" (click)="ui.openEmuleModal()">
         <div class="flex jc-c">
-          <img [width]="45" src="../assets/icons/emule.png" alt="" />
+          <img [width]="45" src="./assets/icons/emule.png" alt="" />
         </div>
         <div class="flex jc-c">Emule</div>
       </div>

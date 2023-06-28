@@ -9,7 +9,7 @@ export class ThemeService {
   private theme$: BehaviorSubject<ThemeType>;
 
   constructor() {
-    this.theme$ = new BehaviorSubject<ThemeType>('delorean');
+    this.theme$ = new BehaviorSubject<ThemeType>('oldSchool');
     this.theme$.asObservable().subscribe((theme) => {
       this.updateCssVariables(theme);
     });
@@ -27,15 +27,21 @@ export class ThemeService {
     const r = document.querySelector(':root') as any;
 
     switch (theme) {
+      case 'oldSchool':
+        r.style.setProperty('--primary', 'black');
+        r.style.setProperty('--hover', '#bbefc8');
+        break;
       case 'firstRule':
         r.style.setProperty('--primary', '#f597cf');
+        r.style.setProperty('--hover', '#8688ff');
         break;
       case 'fresh':
         r.style.setProperty('--primary', '#d5a8fe');
+        r.style.setProperty('--hover', '#f597cf');
         break;
       case 'delorean':
         r.style.setProperty('--primary', '#E86F68');
-        r.style.setProperty('--primary', 'black');
+        r.style.setProperty('--hover', '#7ec9ff');
         break;
 
       default:

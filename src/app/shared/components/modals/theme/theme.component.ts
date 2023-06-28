@@ -23,7 +23,8 @@ export class ThemeModalComponent {
     private themeService: ThemeService
   ) {
     this.checkboxes = [
-      { checked: true, text: 'First rule', theme: 'firstRule' },
+      { checked: true, text: 'Old school', theme: 'oldSchool' },
+      { checked: false, text: 'First rule', theme: 'firstRule' },
       { checked: false, text: 'Fresh', theme: 'fresh' },
       { checked: false, text: 'Delorean', theme: 'delorean' },
     ];

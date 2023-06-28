@@ -1,5 +1,5 @@
-@import "../../../theme/utils/variables";
-@import "../../../theme/utils/responsive";
+@import '../../../theme/utils/variables';
+@import '../../../theme/utils/responsive';
 
 .desktop-container {
   width: 100vw;
@@ -7,7 +7,7 @@
   // background-color: #008080;
   // background: url("../../../assets/images/wallpapers/fight_club.png");
   // background: url("../../../assets/images/wallpapers/fresh_prince.gif");
-  background-size: cover;
+  background-size: cover !important;
   position: relative;
 }
 

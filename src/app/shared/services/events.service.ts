@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-export type ThemeType = 'firstRule' | 'fresh' | 'delorean';
+export type ThemeType = 'firstRule' | 'fresh' | 'delorean' | 'oldSchool';
 
 @Injectable({
   providedIn: 'root',
