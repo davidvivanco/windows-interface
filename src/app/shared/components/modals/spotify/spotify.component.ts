@@ -17,7 +17,7 @@ export class SpotifyComponent {
   constructor(public ui: UiService) {
     this.audioIconPath = './assets/icons/cd-icon.png';
     this.avatarBasePath = './assets/images/avatars/';
-    this.audioBasePath = '/assets/audio/';
+    this.audioBasePath = './assets/audio/';
     this.audioData = [
       {
         artist: 'Fugees',
