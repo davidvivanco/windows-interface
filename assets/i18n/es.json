@@ -1,0 +1,15 @@
+{
+    "about": "Sobre mí",
+    "about_desc1": "Hola! Mi nombre es David Vivanco. Soy Desarrollador de Software con sede en Madrid. Estoy interesado en oportunidades freelance.",
+    "about_desc2": "Soy especialista en JavaScript. Pro frameworks: Angular, Node, React, Ionic",
+    "contact": "Contacto",
+    "my_pictures": "Mis Fotos",
+    "start": "Inicio",
+    "text_me": "Escribeme!",
+    "settings":"Configuración",
+    "language":"Cambiar Idioma",
+    "switch_theme":"Cambiar Tema",
+    "choose_theme":"Elige un tema",
+    "english": "Inglés",
+    "spanish": "Spanish"
+}

@@ -1,0 +1,13 @@
+{
+    "about": "About me",
+    "about_desc1": "Hi! My name is David Vivanco. I'm a Software Developer based in Madrid.I'm interested in freelance opportunities.",
+    "about_desc2": "I'm a specialist in JavaScript. Pro frameworks: Angular, Node, React,Ionic",
+    "contact": "Contact",
+    "my_pictures": "My pics",
+    "start": "Start",
+    "text_me": "Text me!",
+    "settings": "Settings",
+    "switch_theme": "Switch Theme",
+    "choose_theme": "Choose theme desktop",
+    "language":"Change Language"
+}
